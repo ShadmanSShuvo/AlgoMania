@@ -20,7 +20,7 @@ Welcome to AlgoMania — an interactive Algorithm & Data Structures Visualizer b
 
 ---
 
-Table of contents
+### Table of contents
 - Overview
 - Key Features
 - Screenshots
@@ -40,11 +40,11 @@ Table of contents
 
 ---
 
-Overview
+### Overview
 --------
 AlgoMania is an educational desktop application demonstrating classic data structures, graph visualizations/interactions, and sorting simulations. The project uses Java modules and JavaFX for rendering interactive canvases and control panels. It was designed to make learning algorithms more visual and intuitive.
 
-Key Features
+### Key Features
 ------------
 - Interactive data structures visualizer (Arrays, Singly/Doubly Linked Lists, Stack, Queue, Heap, Binary Search Tree, etc.)
 - Graph visualizer and interaction palette (create nodes/edges, run algorithm demos, etc.)
@@ -52,21 +52,29 @@ Key Features
 - Modern JavaFX-based UI with custom styling and control panels
 - Modularized with Java module-info for explicit JavaFX and third-party dependencies
 
-Screenshots
+### Screenshots
 -----------
-- Main menu / dashboard (AlgoMania)
-- Data Structures Visualizer (Array / Linked List / Tree views)
-- Graph Visualizer with control panel and input pane
-- Sorting Simulator showing step-by-step sorting
+**Main menu / dashboard (AlgoMania)**
+  ![Main menu](https://github.com/ShadmanSShuvo/portfolio/blob/main/src/lib/images/algo-mania.png)
 
-Prerequisites
+**Data Structures Visualizer (Array / Linked List / Tree views)**
+  ![](ds.png)
+
+**Graph Visualizer with control panel and input panel**
+  ![](graph.png)
+
+**Sorting Simulator showing step-by-step sorting**
+  ![](sorting.png)
+
+
+### Prerequisites
 -------------
 - JDK 17+ (recommended) or a modern JDK compatible with Java modules
 - JavaFX SDK (a copy of JavaFX 24.0.1 is present in the repo under `javafx-sdk-24.0.1/` but you can also use your system JavaFX installation)
 - An IDE that supports Java modules (IntelliJ IDEA, Eclipse, or VS Code with Java extensions)
 - (Optional) Maven or Gradle if you add a build file
 
-Getting started
+### Getting started
 ---------------
 
 Clone the repository
@@ -96,7 +104,7 @@ Build with Maven or Gradle
   - Add a `pom.xml` or `build.gradle` and include JavaFX dependencies (or configure a plugin to attach the JavaFX SDK).
   - Use the JavaFX Maven Plugin or `org.openjfx` plugin for Gradle to configure module path and runtime arguments.
 
-Project structure (high-level)
+### Project structure (high-level)
 ------------------------------
 - src/main/java/edu/buet/shayan/algomania
   - AlgoMania.java — main entry point and main menu/dashboard UI
@@ -113,7 +121,7 @@ Project structure (high-level)
   - images/ — image assets used by the UI (note: some files reference absolute paths which should be fixed)
 - javafx-sdk-24.0.1/ — included JavaFX SDK resources & legal notices (present in repository snapshot)
 
-Main modules & dependencies
+### Main modules & dependencies
 ---------------------------
 The Java module descriptor (module-info.java) declares dependencies used by the project:
 - requires javafx.controls
@@ -129,14 +137,14 @@ The Java module descriptor (module-info.java) declares dependencies used by the 
 
 If you don't want to use all third-party libraries, the core experience should still work with JavaFX modules (controls and fxml), though some UI enhancements might require installing/adding these libraries on the module path.
 
-Usage / What each part does
+### Usage / What each part does
 --------------------------
 - AlgoMania (main) — Presents a dashboard with options for Graphs, Sorting, and Data Structures. Click the Data Structures panel to launch the Data Structures Visualizer.
 - DataStructuresVisualizer — Choose a structure (Array, SLL, DLL, Stack, Queue, Heap, BST). Use the control panel to insert, delete, search, peek, or perform indexed operations where supported.
 - Graph Visualizer — Create graphs from text input or through interactive canvas operations. Tools exist for mode management (add/remove nodes, connect edges) and a control panel for running or simulating graph algorithms.
 - Sorting Simulator — Visualize sorting algorithms step-by-step (sorting algorithms are implemented in the sorting package).
 
-Developer notes & tips
+### Developer notes & tips
 ----------------------
 - Resource paths: The repository contains code that loads images with absolute Windows paths (e.g., "C:\Users\hp\Desktop\AlgoMania\..."). To make the app portable, change the code to load resources from the classpath (use getResource or resource streams). Example:
   Image icon = new Image(getClass().getResourceAsStream("/edu/buet/shayan/algomania/images/main_icon.png"));
@@ -148,7 +156,7 @@ Developer notes & tips
 - If you add a build system (Maven/Gradle), use the OpenJFX artifacts (org.openjfx:javafx-*) for your platform, or configure the JavaFX SDK plugin.
 - Packaging: If you wish to distribute a native installer, consider jlink or jpackage (both require module-awareness and proper module configuration).
 
-Contributing
+### Contributing
 ------------
 Contributions are welcome. A suggested workflow:
 1. Fork the repository.
@@ -161,26 +169,26 @@ Guidelines:
 - Prefer loading UI resources from the classpath (relative paths) for portability.
 - If adding third-party libraries, update module-info.java and document any required VM arguments.
 
-Known issues & common fixes
+### Known issues & common fixes
 ---------------------------
 - Missing JavaFX runtime / NoClassDefFoundError: Ensure JavaFX SDK path is set and included with --module-path and --add-modules flags.
 - Images not appearing: Fix absolute paths and use resources bundled in JAR or module resources.
 - If running on a different OS, ensure you use the correct JavaFX binaries for your platform (Linux/Windows/macOS).
 
-License & acknowledgements
+### License & acknowledgements
 --------------------------
-- License: No explicit license file found in the repository snapshot. If you want to publish this repo publicly and grant reuse rights, add a LICENSE (for example, MIT, Apache 2.0, or GPL) to the project root.
+- License: MIT License
 - Acknowledgements:
   - JavaFX for UI rendering
   - ControlsFX, FormsFX, ValidatorFX, Ikonli, BootstrapFX, TilesFX, FXGL referenced in module-info for enhanced UI components. See module-info.java for the full list.
 
-Contact
+### Contact
 -------
 If you'd like to collaborate or report issues, open an issue in the repository or reach out via GitHub: https://github.com/ShadmanSShuvo
 
 ---
 
-Quick checklist to get the project running locally
+### Quick checklist to get the project running locally
 1. Install JDK (17+ recommended).
 2. Ensure JavaFX SDK is present (the repository has a `javafx-sdk-24.0.1` folder in this snapshot).
 3. Update resource/image loading code to use classpath resources (recommended).
