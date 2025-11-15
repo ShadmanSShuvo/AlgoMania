@@ -71,7 +71,7 @@ Getting started
 
 Clone the repository
 
-```
+```bash
 git clone https://github.com/ShadmanSShuvo/AlgoMania.git
 cd AlgoMania
 ```
