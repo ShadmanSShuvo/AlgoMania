@@ -142,7 +142,9 @@ Developer notes & tips
   Image icon = new Image(getClass().getResourceAsStream("/edu/buet/shayan/algomania/images/main_icon.png"));
 - Modules: The project uses Java modules. When running from IDE or CLI, ensure JavaFX jars are on the module path and not just the classpath.
 - Common runtime VM args:
+  ```
   --module-path /path/to/javafx-sdk-24.0.1/lib --add-modules=javafx.controls,javafx.fxml,javafx.web
+  ```
 - If you add a build system (Maven/Gradle), use the OpenJFX artifacts (org.openjfx:javafx-*) for your platform, or configure the JavaFX SDK plugin.
 - Packaging: If you wish to distribute a native installer, consider jlink or jpackage (both require module-awareness and proper module configuration).
 
