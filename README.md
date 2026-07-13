@@ -55,7 +55,7 @@ AlgoMania is an educational desktop application demonstrating classic data struc
 ### Screenshots
 -----------
 **Main menu / dashboard (AlgoMania)**
-  ![Main menu](https://github.com/ShadmanSShuvo/portfolio/blob/main/src/lib/images/algo-mania.png)
+  ![Main menu](algo-mania.png)
 
 **Data Structures Visualizer (Array / Linked List / Tree views)**
   ![](ds.png)
